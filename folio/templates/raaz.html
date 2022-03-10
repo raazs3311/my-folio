@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<header>
+    {% for item in var1 %}
+
+    <div class="headerImage">
+        
+        <img src="{{item.img}}" alt="logo">
+        
+        <div class="headerItems">
+            <h2 class="headerName">
+                <span style="--i:1;">R</span>
+                <span style="--i:2;">I</span>
+                <span style="--i:3;">T</span>
+                <span style="--i:4;">U</span>
+                <span style="--i:5;">R</span>
+                <span style="--i:6;">A</span>
+                <span style="--i:7;">J</span>
+                <span>-</span>
+                <span style="--i:8;">S</span>
+                <span style="--i:9;">H</span>
+                <span style="--i:10;">A</span>
+                <span style="--i:11;">R</span>
+                <span style="--i:12;">M</span>
+                <span style="--i:13;">A</span>
+            </h2>
+        </div>
+        <h1 class="headerSkill">A Back-end web developer</h1>
+    </div>
+    {% endfor %}
+</header>
+<!-- profile -->
+<div class="profile">
+    <div class="profileDetail">
+        <p>Hey! My name is Rituraj Sharma. I am a Back end web developer.</p>
+    </div>
+    <div class="profileImage">
+        <img src="static/image/raj.jpg" alt="no" width="250px" height="250px">
+    </div>
+</div>
+<!-- projects -->
+<div id="projects">
+    <h2 style="text-align: center; margin: 50px 0px;">Projects</h2>
+    
+    <div class="projectsGrid">
+        <div onclick="location.href= 'https://github.com/raazs3311/ecom '"  target="blank">
+            <img src="static/image/projectimg.jpg" alt="projectone">
+            
+            <p>Ecom website to using html,css,django.</p>
+            <a href="https://github.com/raazs3311/ecom" target="_blank">know more !</a>
+        </div>
+        <div>
+				<img src="https://media.istockphoto.com/photos/powerful-personal-computer-gamer-rig-with-firstperson-shooter-game-on-picture-id1157159213?k=20&m=1157159213&s=612x612&w=0&h=oYVqFen_st-jxHXy3KzZXmbaQlDwo06HJmbZDZJO7KE=" alt="projecttwo">
+				<p>Pygame</p>
+				<p>Snake Game</p>
+				<a href="https://github.com/raazs3311/snake-game">know more !</a>
+		</div>
+        <!-- <div style="opacity: 0.6;">
+            <img data-src="https://cdn.pixabay.com/photo/2015/05/31/10/55/man-791049__340.jpg" alt="projectthree">
+            <p> NEWS API's comming soon !</p>
+            <a href="#">comming soon !</a>
+        </div> -->
+    </div>
+    
+</div>
+<!-- resume -->
+<div id="resume">
+    <div style="width: 40%">
+        <img src="static/image/resume.jpg">
+    </div>
+    <div style="width: 40%; text-align: center;">
+        
+        <a href="https://drive.google.com/file/d/12-7YKuRJw4iH5AVGqkwNT1xeSlEh48HB/view?usp=drivesdk" title="">download resume !</a>
+    </div>
+</div>
+
+<!-- contact -->
+<form action="" method="post" accept-charset="utf-8">
+    {% csrf_token %}
+    <label for="name">name</label>
+    <input autocomplete="off" type="text" name="Name">
+    <label for="email">email</label>
+    <input type="text" name="Email">
+    <textarea name="query" placeholder="your query !"></textarea>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
+
+    

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <title>Raaz</title>
+    <link href="css/raaz.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet"  href="{% static 'css/raaz.css' %}" />
+
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-shadow: border-box;
+        }
+        
+        .contact {
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(109, 108, 99, 0.3);
+            background-color: #444;
+            background: linear-gradient(#005a8f47, #d7dfe2);
+        }
+        
+        .contact p {
+            margin: 20px;
+        }
+        
+        form {
+            margin: 100px auto;
+        }
+        
+        div a {
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .callnowbtn i {
+            position: absolute;
+            left: -40px;
+            animation: rotate 1s linear infinite;
+            transform: scale(1);
+        }
+        
+        @keyframes rotate {
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .contact {
+            text-transform: capitalize;
+        }
+        
+        .callnowbtn a {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .contact {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .callnowbtn {
+                margin-top: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <ul>
+                <h2 class="logo">Raaz</h2>
+                <h6 class="headLine"> --- it always seems impossible untill it's done</h6>
+            </ul>
+            <ul id="toggleThis">
+                <li><a href="/" title="">home</a></li>
+                <li><a href="https://github.com/raazs3311/ecom" title="">projects</a></li>
+                <li><a href="https://drive.google.com/file/d/12-7YKuRJw4iH5AVGqkwNT1xeSlEh48HB/view?usp=drivesdk" title="">resume</a></li>
+                <li><a href="/contact" title="">conatct</a></li>
+            </ul>
+            <div id="toggle">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+            </div>
+        </nav>
+    </header>
+        {% block body %}
+
+        
+
+        {% endblock %}
+
+
+        <footer>
+            <div>
+                <p>design & developed by : <a href="https://www.instagram.com/er_raaz_sharma/">Rituraj Sharma</a> </p>
+            </div>
+    
+            <div class="socialMedia">
+                <a class="instagram" href="https://www.instagram.com/er_raaz_sharma/" target="blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                <a class="facebook" href="https://www.facebook.com/rituraj.sharma.716533" target="blank"> <i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                <a class="linkedin" href="https://www.linkedin.com/in/rituraj-sharma-2123aa22a" target="blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                <a class="twitter" href="https://twitter.com/Rituraj0806887" target="blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+    
+            </div>
+    
+            <div>
+                <p>all copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2022 Rituraj Sharma</p>
+            </div>
+        </footer>
+    
+
+
+</body>
+
+</html>
